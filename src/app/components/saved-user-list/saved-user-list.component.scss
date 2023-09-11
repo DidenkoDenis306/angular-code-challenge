@@ -1,0 +1,18 @@
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+a {
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  background-color: aquamarine;
+  border-radius: 15px;
+}

@@ -1,0 +1,34 @@
+<div class="user-card">
+  <div class="user-details">
+    <img
+      [src]="user.picture.large"
+      alt="Profile Picture"
+      class="profile-image"
+    >
+    <h2>{{ user.name.first }} {{ user.name.last }}</h2>
+    <p><strong>Gender:</strong> {{ user.gender }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Location:</strong> {{ user.location.city }}, {{ user.location.country }}</p>
+  </div>
+
+  <div class="weather-details" *ngIf="user.weatherData">
+    <img
+      [src]="getWeatherIconPath(user)"
+      alt="Weather Icon"
+      class="weather-icon"
+    >
+    <p><strong>Current Temperature:</strong> {{ user.weatherData.current_weather.temperature }}°C</p>
+    <p><strong>Lowest Temperature:</strong> {{ getMinTemperature(user) }}°C</p>
+    <p><strong>Highest Temperature:</strong> {{ getMaxTemperature(user) }}°C</p>
+  </div>
+
+  <button
+    *ngIf="isRandomUsersRoute"
+    (click)="saveUser(user)"
+    class="save-button"
+    [ngStyle]="saved ? {'background-color':'grey'} : {}"
+    [disabled]="saved"
+  >
+    {{ saved ? 'Saved' : 'Save' }}
+  </button>
+</div>

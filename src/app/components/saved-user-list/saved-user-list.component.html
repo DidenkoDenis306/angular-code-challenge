@@ -1,1 +1,14 @@
-<p>saved-user-list works!</p>
+<a
+  routerLink="/users"
+  routerLinkActive="active"
+  ariaCurrentWhenActive="page"
+>
+  Random users
+</a>
+
+<div class="user-list">
+  <app-user-card
+    *ngFor="let user of users"
+    [user]="user"
+  ></app-user-card>
+</div>
