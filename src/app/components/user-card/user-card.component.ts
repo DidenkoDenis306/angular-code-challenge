@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { User } from 'src/app/models/user.mode';
+import { User } from 'src/app/models/user';
 import { WeatherIconService } from 'src/app/services/weather-icon.service';
 
 @Component({

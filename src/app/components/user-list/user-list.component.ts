@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { WeatherIconService } from '../../services/weather-icon.service';
-import { User } from 'src/app/models/user.mode';
-import { WeatherData } from 'src/app/models/weatherData.model';
+import { User } from 'src/app/models/user';
+import { WeatherData } from 'src/app/models/weatherData';
 import { UsersService } from 'src/app/services/users.service';
 import { WeatherService } from 'src/app/services/weather.service';
 

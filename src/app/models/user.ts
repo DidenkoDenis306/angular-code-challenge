@@ -1,4 +1,4 @@
-import { WeatherData } from "./weatherData.model";
+import { WeatherData } from "./weatherData";
 
 export interface User {
   name: {
